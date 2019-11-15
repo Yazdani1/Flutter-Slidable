@@ -5,25 +5,17 @@ class Home extends StatefulWidget {
   @override
   _HomeState createState() => new _HomeState();
 }
-
 class _HomeState extends State<Home> {
-
   Future<Null>getRefresh()async{
-
-    await Future.delayed(Duration(seconds: 3));
-
+    await Future.delayed(Duration(seconds: 4));
   }
-
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-
       appBar: AppBar(
         title: Text("Flutter Slidable"),
         backgroundColor: Colors.amber,
       ),
-
       body: RefreshIndicator(
         onRefresh: getRefresh,
         backgroundColor: Colors.amberAccent,
